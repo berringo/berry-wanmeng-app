@@ -94,8 +94,8 @@ spec:
       workspaces:
         - name: source
           workspace: pipeline-shared-data
-        #- name: target
-         # workspace: production-repository
+        - name: target
+          workspace: production-repository
   workspaces:
     - name: pipeline-shared-data
-    #- name: production-repository
+    - name: production-repository

@@ -15,7 +15,7 @@ spec:
       description: the resource type of the service
   steps:
     - name: deploy
-      image: quay.io/berringo/kubectl:latest
+      image: quay.io/upslopeio/kubectl:latest
       script: |
         #!/bin/sh
         set -e
