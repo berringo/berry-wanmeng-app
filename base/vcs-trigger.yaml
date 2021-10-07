@@ -51,14 +51,14 @@ spec:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
       metadata:
-        generateName: express-sample-app-pipeline-
+        generateName: nextjs-app-pipeline-
       spec:
         pipelineRef:
           name: nextjs
         serviceAccountName: build-bot
         params:
           - name: app-name
-            value: express-sample-app
+            value: nextjs-app
           - name: source-repo
             value: https://github.com/berringo/berry-wanmeng-app
           - name: image-repo

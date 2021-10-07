@@ -12,6 +12,6 @@ images:
   newName: quay.io/berringo/berry-wanmeng-app
   newTag: c34b6efbefd03c21d1075a23ffb85ce36f610f46
 commonLabels:
-  app: express-sample-app
-  app.kubernetes.io/instance: express-sample-app
-  app.kubernetes.io/name: express-sample-app
+  app: nextjs-app
+  app.kubernetes.io/instance: nextjs-app
+  app.kubernetes.io/name: nextjs-app
