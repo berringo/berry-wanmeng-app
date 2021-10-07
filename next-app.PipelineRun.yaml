@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: nextjs-app-
+spec:
+  serviceAccountName: build-bot
+  params:
+    - name: app-name
+      value: express-sample-app
+    - name: source-repo
+      value: https://github.com/berringo/berry-wanmeng-app
+    - name: image-repo
+      value: quay.io/berringo/berry-wanmeng-app
+  pipelineRef:
+    name: nextjs
+  workspaces:
+    - name: pipeline-shared-data
+      volumeClaimTemplate:
+        spec:
+          resources:
+            requests:
+              storage: 1Gi
+          accessModes:
+            - ReadWriteOnce
