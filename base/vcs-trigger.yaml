@@ -72,6 +72,14 @@ spec:
                 resources:
                   requests:
                     storage: 1Gi
+          - name: production-repository
+            volumeClaimTemplate: 
+              spec: 
+                resources:
+                  requests:
+                    storage: 1Gi
+                accessModes:
+                  - ReadWriteOnce
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
@@ -101,4 +109,3 @@ spec:
     kind: Service
     name: el-vcs-trigger
     weight: 100
-    
